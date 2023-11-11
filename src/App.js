@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
 import { CssVarsProvider } from "@mui/joy/styles";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import Autocomplete from "@mui/joy/Autocomplete";
@@ -15,6 +19,19 @@ import Table from "@mui/joy/Table";
 import Typography from "@mui/joy/Typography";
 
 const moment = require("moment-timezone");
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBCDoXFXq78UhcW0yVzbaUzx5VHbquUmyY",
+  authDomain: "zrl-local-time.firebaseapp.com",
+  projectId: "zrl-local-time",
+  storageBucket: "zrl-local-time.appspot.com",
+  messagingSenderId: "424537142278",
+  appId: "1:424537142278:web:f7dfc91d752a7dc9a43f87",
+  measurementId: "G-87ELDJ9H5H",
+};
+
+const firebaseApp = initializeApp(firebaseConfig);
+const analytics = getAnalytics(firebaseApp);
 
 function App() {
   const [division, setDivision] = useState(
