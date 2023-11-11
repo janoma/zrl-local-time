@@ -13,18 +13,21 @@ import Typography from "@mui/joy/Typography";
 const moment = require("moment-timezone");
 
 function App() {
-  const [division, setDivision] = useState("open");
-  const [region, setRegion] = useState("EMEAE Central");
-  const [timezone, setTimezone] = useState(moment.tz.guess());
+  const [division, setDivision] = useState(
+    localStorage.getItem("division") || "open"
+  );
+  const [region, setRegion] = useState(
+    localStorage.getItem(`region-${division}`) || "EMEAE Central"
+  );
+  const [timezone, setTimezone] = useState(
+    localStorage.getItem("timezone") || moment.tz.guess()
+  );
+
   const [zrl, setZrl] = useState(null);
   const [races, setRaces] = useState(null);
 
   const handleDivisionChange = (event) => {
     setDivision(event.target.value);
-  };
-
-  const handleRegionChange = (event) => {
-    setRegion(event.target.value);
   };
 
   const regions =
@@ -94,6 +97,23 @@ function App() {
       setRegion("EMEAE Central");
     }
   }, [division, region, regions]);
+
+  useEffect(() => {
+    localStorage.setItem("division", division);
+    if (division === "women" && localStorage.getItem("region-women")) {
+      setRegion(localStorage.getItem("region-women"));
+    } else if (division === "open" && localStorage.getItem("region-open")) {
+      setRegion(localStorage.getItem("region-open"));
+    }
+  }, [division]);
+
+  useEffect(() => {
+    localStorage.setItem(`region-${division}`, region);
+  }, [division, region]);
+
+  useEffect(() => {
+    localStorage.setItem("timezone", timezone);
+  }, [timezone]);
 
   const canShowTimes =
     moment.tz.zone(timezone) &&
