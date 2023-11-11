@@ -254,7 +254,15 @@ function App() {
                 {races.map((row) => (
                   <tr key={row.number}>
                     <td>{row.number}</td>
-                    <td>{moment(row.date).tz(timezone).format("ll")}</td>
+                    <td>
+                      {moment
+                        .tz(
+                          `${row.date} ${zrl[division][region].time}`,
+                          zrl[division][region].timezone
+                        )
+                        .tz(timezone)
+                        .format("ll")}
+                    </td>
                     <td>
                       <Typography
                         style={{ fontWeight: "var(--joy-fontWeight-lg)" }}
