@@ -3,16 +3,17 @@ import { CssVarsProvider } from "@mui/joy/styles";
 import Autocomplete from "@mui/joy/Autocomplete";
 import CssBaseline from "@mui/joy/CssBaseline";
 import FormControl from "@mui/joy/FormControl";
-import FormLabel from "@mui/joy/FormLabel";
 import GlobalStyles from "@mui/joy/GlobalStyles";
 import Radio from "@mui/joy/Radio";
 import RadioGroup from "@mui/joy/RadioGroup";
 import Typography from "@mui/joy/Typography";
 
+const moment = require("moment-timezone");
+
 function App() {
   const [division, setDivision] = useState("open");
   const [region, setRegion] = useState("EMEAE Central");
-  console.log(division, region);
+  const [timezone, setTimezone] = useState(moment.tz.guess());
 
   const handleDivisionChange = (event) => {
     setDivision(event.target.value);
@@ -63,6 +64,8 @@ function App() {
           "Americas North",
           "Americas West",
         ];
+
+  const timezones = moment.tz.names();
 
   useEffect(() => {
     if (division === "women" && !regions.includes(region)) {
@@ -129,6 +132,16 @@ function App() {
             }}
             options={regions}
             value={region}
+          />
+        </FormControl>
+        <FormControl className="question">
+          <Typography level="h3">What's your local timezone?</Typography>
+          <Autocomplete
+            onChange={(event, newValue) => {
+              setTimezone(newValue);
+            }}
+            options={timezones}
+            value={timezone}
           />
         </FormControl>
       </main>
