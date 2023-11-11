@@ -3,20 +3,25 @@ import { useEffect, useMemo, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
+import {
+  AccessTime,
+  CalendarMonth,
+  Launch,
+  Map,
+  PedalBike,
+} from "@mui/icons-material";
+import {
+  Autocomplete,
+  CssBaseline,
+  FormControl,
+  GlobalStyles,
+  Link,
+  Radio,
+  RadioGroup,
+  Table,
+  Typography,
+} from "@mui/joy";
 import { CssVarsProvider } from "@mui/joy/styles";
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import Autocomplete from "@mui/joy/Autocomplete";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import CssBaseline from "@mui/joy/CssBaseline";
-import FormControl from "@mui/joy/FormControl";
-import GlobalStyles from "@mui/joy/GlobalStyles";
-import Link from "@mui/joy/Link";
-import MapIcon from "@mui/icons-material/Map";
-import PedalBikeIcon from "@mui/icons-material/PedalBike";
-import Radio from "@mui/joy/Radio";
-import RadioGroup from "@mui/joy/RadioGroup";
-import Table from "@mui/joy/Table";
-import Typography from "@mui/joy/Typography";
 
 const moment = require("moment-timezone");
 
@@ -31,7 +36,6 @@ const firebaseConfig = {
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
-// TODO: use analytics
 // eslint-disable-next-line no-unused-vars
 const analytics = getAnalytics(firebaseApp);
 
@@ -152,13 +156,9 @@ function App() {
       <GlobalStyles
         styles={{
           body: {
-            maxWidth: "80ch",
+            maxWidth: "70ch",
             margin: "0 auto",
             padding: "1rem",
-          },
-          "#root": {
-            display: "grid",
-            justifyItems: "center",
           },
           main: {
             padding: "2rem",
@@ -231,22 +231,20 @@ function App() {
                 <tr>
                   <th style={{ width: "5%" }}>#</th>
                   <th>
-                    <Typography startDecorator={<CalendarMonthIcon />}>
+                    <Typography startDecorator={<CalendarMonth />}>
                       Date
                     </Typography>
                   </th>
                   <th>
-                    <Typography startDecorator={<AccessTimeIcon />}>
+                    <Typography startDecorator={<AccessTime />}>
                       Time
                     </Typography>
                   </th>
                   <th>
-                    <Typography startDecorator={<PedalBikeIcon />}>
-                      Type
-                    </Typography>
+                    <Typography startDecorator={<PedalBike />}>Type</Typography>
                   </th>
                   <th style={{ width: "40%" }}>
-                    <Typography startDecorator={<MapIcon />}>Course</Typography>
+                    <Typography startDecorator={<Map />}>Course</Typography>
                   </th>
                 </tr>
               </thead>
@@ -281,6 +279,7 @@ function App() {
                       <Link
                         href={row.courseUrl}
                         color="neutral"
+                        endDecorator={<Launch />}
                         target="_blank"
                         rel="noopener"
                       >
@@ -294,6 +293,12 @@ function App() {
           </section>
         )}
       </main>
+      <footer>
+        <Typography level="title-sm" color="neutral">
+          Brought to you by{" "}
+          <Link href="https://instagram.com/janoma_cl">janoma</Link>.
+        </Typography>
+      </footer>
     </CssVarsProvider>
   );
 }
