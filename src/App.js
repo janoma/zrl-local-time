@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { CssVarsProvider } from "@mui/joy/styles";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import Autocomplete from "@mui/joy/Autocomplete";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CssBaseline from "@mui/joy/CssBaseline";
 import FormControl from "@mui/joy/FormControl";
 import GlobalStyles from "@mui/joy/GlobalStyles";
 import Link from "@mui/joy/Link";
+import MapIcon from "@mui/icons-material/Map";
+import PedalBikeIcon from "@mui/icons-material/PedalBike";
 import Radio from "@mui/joy/Radio";
 import RadioGroup from "@mui/joy/RadioGroup";
 import Table from "@mui/joy/Table";
@@ -155,7 +159,9 @@ function App() {
       </header>
       <main>
         <FormControl className="question">
-          <Typography level="h3">What's your main division?</Typography>
+          <Typography level="h3" color="neutral">
+            What's your main division?
+          </Typography>
           <RadioGroup defaultValue="open" name="division-group">
             <Radio
               checked={division == "women"}
@@ -174,7 +180,9 @@ function App() {
           </RadioGroup>
         </FormControl>
         <FormControl className="question">
-          <Typography level="h3">What's your region?</Typography>
+          <Typography level="h3" color="neutral">
+            What's your team's ZRL region?
+          </Typography>
           <Autocomplete
             onChange={(event, newValue) => {
               setRegion(newValue);
@@ -184,7 +192,9 @@ function App() {
           />
         </FormControl>
         <FormControl className="question">
-          <Typography level="h3">What's your local timezone?</Typography>
+          <Typography level="h3" color="neutral">
+            What's your local timezone?
+          </Typography>
           <Autocomplete
             onChange={(event, newValue) => {
               setTimezone(newValue);
@@ -200,10 +210,24 @@ function App() {
               <thead>
                 <tr>
                   <th style={{ width: "5%" }}>#</th>
-                  <th>Date</th>
-                  <th>Time</th>
-                  <th>Type</th>
-                  <th style={{ width: "40%" }}>Course</th>
+                  <th>
+                    <Typography startDecorator={<CalendarMonthIcon />}>
+                      Date
+                    </Typography>
+                  </th>
+                  <th>
+                    <Typography startDecorator={<AccessTimeIcon />}>
+                      Time
+                    </Typography>
+                  </th>
+                  <th>
+                    <Typography startDecorator={<PedalBikeIcon />}>
+                      Type
+                    </Typography>
+                  </th>
+                  <th style={{ width: "40%" }}>
+                    <Typography startDecorator={<MapIcon />}>Course</Typography>
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -212,13 +236,17 @@ function App() {
                     <td>{row.number}</td>
                     <td>{moment(row.date).tz(timezone).format("ll")}</td>
                     <td>
-                      {moment
-                        .tz(
-                          `${row.date} ${zrl[division][region].time}`,
-                          zrl[division][region].timezone
-                        )
-                        .tz(timezone)
-                        .format("LT")}
+                      <Typography
+                        style={{ fontWeight: "var(--joy-fontWeight-lg)" }}
+                      >
+                        {moment
+                          .tz(
+                            `${row.date} ${zrl[division][region].time}`,
+                            zrl[division][region].timezone
+                          )
+                          .tz(timezone)
+                          .format("LT")}
+                      </Typography>
                     </td>
                     <td>{row.type}</td>
                     <td>
