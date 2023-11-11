@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -31,6 +31,8 @@ const firebaseConfig = {
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
+// TODO: use analytics
+// eslint-disable-next-line no-unused-vars
 const analytics = getAnalytics(firebaseApp);
 
 function App() {
@@ -51,8 +53,8 @@ function App() {
     setDivision(event.target.value);
   };
 
-  const regions =
-    division === "women"
+  const regions = useMemo(() => {
+    return division === "women"
       ? [
           "Oceania East",
           "Oceania West",
@@ -92,6 +94,7 @@ function App() {
           "Americas North",
           "Americas West",
         ];
+  }, [division]);
 
   const timezones = moment.tz.names();
 
@@ -181,14 +184,14 @@ function App() {
           </Typography>
           <RadioGroup defaultValue="open" name="division-group">
             <Radio
-              checked={division == "women"}
+              checked={division === "women"}
               label="Women's"
               onChange={handleDivisionChange}
               value="women"
               variant="outlined"
             />
             <Radio
-              checked={division == "open"}
+              checked={division === "open"}
               label="Open/Mixed/Co-Ed"
               onChange={handleDivisionChange}
               value="open"
