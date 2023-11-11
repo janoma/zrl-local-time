@@ -182,7 +182,11 @@ function App() {
           <Typography level="h3" color="neutral">
             What's your main division?
           </Typography>
-          <RadioGroup defaultValue="open" name="division-group">
+          <RadioGroup
+            defaultValue="open"
+            orientation="horizontal"
+            name="division-group"
+          >
             <Radio
               checked={division === "women"}
               label="Women's"
