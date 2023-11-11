@@ -1,0 +1,146 @@
+{
+  "women": {
+    "Oceania East": {
+      "timezone": "Pacific/Auckland",
+      "time": "19:30"
+    },
+    "Oceania West": {
+      "timezone": "Australia/Sydney",
+      "time": "19:15"
+    },
+    "EMEAE South-East": {
+      "timezone": "Europe/Amsterdam",
+      "time": "18:10"
+    },
+    "EMEAE East": {
+      "timezone": "Europe/London",
+      "time": "18:10"
+    },
+    "EMEAE Central": {
+      "timezone": "Europe/London",
+      "time": "19:10"
+    },
+    "EMEAE West": {
+      "timezone": "Europe/London",
+      "time": "19:20"
+    },
+    "Americas South": {
+      "timezone": "America/Santiago",
+      "time": "18:20"
+    },
+    "Americas East": {
+      "timezone": "America/Denver",
+      "time": "17:20"
+    },
+    "Americas West": {
+      "timezone": "America/Denver",
+      "time": "19:30"
+    }
+  },
+  "open": {
+    "Oceania North-East": {
+      "timezone": "Australia/Sydney",
+      "time": "16:15"
+    },
+    "Oceania East": {
+      "timezone": "Pacific/Auckland",
+      "time": "19:15"
+    },
+    "Oceania South": {
+      "timezone": "Europe/London",
+      "time": "07:15"
+    },
+    "Oceania West": {
+      "timezone": "Australia/Sydney",
+      "time": "19:20"
+    },
+    "Atlantic South-East": {
+      "timezone": "Europe/London",
+      "time": "09:30"
+    },
+    "Atlantic East": {
+      "timezone": "America/New_York",
+      "time": "05:30"
+    },
+    "Atlantic Central": {
+      "timezone": "America/Chicago",
+      "time": "05:30"
+    },
+    "Atlantic North": {
+      "timezone": "America/New_York",
+      "time": "07:30"
+    },
+    "Atlantic West": {
+      "timezone": "America/Denver",
+      "time": "06:30"
+    },
+    "EMEAE South-East": {
+      "timezone": "Africa/Johannesburg",
+      "time": "19:00"
+    },
+    "EMEAE East": {
+      "timezone": "Europe/Amsterdam",
+      "time": "18:30"
+    },
+    "EMEAE North-East": {
+      "timezone": "Europe/Amsterdam",
+      "time": "18:45"
+    },
+    "EMEAE South": {
+      "timezone": "Europe/Amsterdam",
+      "time": "19:00"
+    },
+    "EMEAE Central": {
+      "timezone": "Europe/Amsterdam",
+      "time": "19:15"
+    },
+    "EMEAE North": {
+      "timezone": "Europe/Amsterdam",
+      "time": "19:30"
+    },
+    "EMEAW South-East": {
+      "timezone": "Europe/Amsterdam",
+      "time": "19:45"
+    },
+    "EMEAW East": {
+      "timezone": "Europe/London",
+      "time": "19:00"
+    },
+    "EMEAW South": {
+      "timezone": "Europe/London",
+      "time": "19:15"
+    },
+    "EMEAW Central": {
+      "timezone": "Europe/London",
+      "time": "19:30"
+    },
+    "EMEAW North": {
+      "timezone": "Europe/London",
+      "time": "19:35"
+    },
+    "EMEAW West": {
+      "timezone": "Europe/London",
+      "time": "19:45"
+    },
+    "Americas South": {
+      "timezone": "America/Santiago",
+      "time": "20:30"
+    },
+    "Americas East": {
+      "timezone": "America/New_York",
+      "time": "19:30"
+    },
+    "Americas Central": {
+      "timezone": "America/Denver",
+      "time": "17:35"
+    },
+    "Americas North": {
+      "timezone": "America/Denver",
+      "time": "18:30"
+    },
+    "Americas West": {
+      "timezone": "America/Denver",
+      "time": "19:45"
+    }
+  }
+}

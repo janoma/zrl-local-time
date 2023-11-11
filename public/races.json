@@ -1,0 +1,44 @@
+[
+  {
+    "number": 1,
+    "date": "2023-11-14",
+    "type": "Scratch",
+    "course": "London Loop Reverse",
+    "courseUrl": "https://zwiftinsider.com/route/london-loop-reverse/"
+  },
+  {
+    "number": 2,
+    "date": "2023-11-21",
+    "type": "Points",
+    "course": "Glasgow Crit Circuit",
+    "courseUrl": "https://zwiftinsider.com/route/glasgow-crit-circuit/"
+  },
+  {
+    "number": 3,
+    "date": "2023-11-28",
+    "type": "TTT",
+    "course": "Watopia's Waistband",
+    "courseUrl": "https://zwiftinsider.com/route/watopias-waistband/"
+  },
+  {
+    "number": 4,
+    "date": "2023-12-05",
+    "type": "Scratch",
+    "course": "Suki's Playground",
+    "courseUrl": "https://zwiftinsider.com/route/sukis-playground"
+  },
+  {
+    "number": 5,
+    "date": "2023-12-12",
+    "type": "Points",
+    "course": "The Muckle Yin",
+    "courseUrl": "https://zwiftinsider.com/route/the-muckle-yin/"
+  },
+  {
+    "number": 6,
+    "date": "2023-12-19",
+    "type": "TTT",
+    "course": "Triple Flat Loops",
+    "courseUrl": "https://zwiftinsider.com/route/triple-flat-loops/"
+  }
+]
