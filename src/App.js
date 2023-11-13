@@ -52,53 +52,13 @@ function App() {
 
   const [zrl, setZrl] = useState(null);
   const [races, setRaces] = useState(null);
+  const [womenRegions, setWomenRegions] = useState([]);
+  const [openRegions, setOpenRegions] = useState([]);
+  const [regions, setRegions] = useState([]);
 
   const handleDivisionChange = (event) => {
     setDivision(event.target.value);
   };
-
-  const regions = useMemo(() => {
-    return division === "women"
-      ? [
-          "Oceania East",
-          "Oceania West",
-          "EMEAE South-East",
-          "EMEAE East",
-          "EMEAE Central",
-          "EMEAE West",
-          "Americas South",
-          "Americas East",
-          "Americas West",
-        ]
-      : [
-          "Oceania North-East",
-          "Oceania East",
-          "Oceania South",
-          "Oceania West",
-          "Atlantic South-East",
-          "Atlantic East",
-          "Atlantic Central",
-          "Atlantic North",
-          "Atlantic West",
-          "EMEAE South-East",
-          "EMEAE East",
-          "EMEAE North-East",
-          "EMEAE South",
-          "EMEAE Central",
-          "EMEAE North",
-          "EMEAW South-East",
-          "EMEAW East",
-          "EMEAW South",
-          "EMEAW Central",
-          "EMEAW North",
-          "EMEAW West",
-          "Americas South",
-          "Americas East",
-          "Americas Central",
-          "Americas North",
-          "Americas West",
-        ];
-  }, [division]);
 
   const timezones = moment.tz.names();
 
@@ -106,7 +66,11 @@ function App() {
     const fetchZrl = async () => {
       fetch("./zrl.json")
         .then((response) => response.json())
-        .then((data) => setZrl(data));
+        .then((data) => {
+          setZrl(data);
+          setWomenRegions(Object.keys(data.women));
+          setOpenRegions(Object.keys(data.open));
+        });
     };
     fetchZrl();
   }, []);
@@ -142,6 +106,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem("timezone", timezone);
   }, [timezone]);
+
+  useEffect(() => {
+    setRegions(division === "women" ? womenRegions : openRegions);
+  }, [division, openRegions, womenRegions]);
 
   const canShowTimes =
     moment.tz.zone(timezone) &&
