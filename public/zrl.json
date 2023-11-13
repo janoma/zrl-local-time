@@ -1,146 +1,114 @@
 {
   "women": {
-    "Oceania East": {
-      "timezone": "Pacific/Auckland",
-      "time": "19:30"
-    },
-    "Oceania West": {
+    "Oceania Western": {
       "timezone": "Australia/Sydney",
       "time": "19:15"
     },
-    "EMEAE South-East": {
-      "timezone": "Europe/Amsterdam",
-      "time": "18:10"
-    },
-    "EMEAE East": {
+    "EMEAE Eastern": {
       "timezone": "Europe/London",
-      "time": "18:10"
+      "time": "17:10"
     },
     "EMEAE Central": {
       "timezone": "Europe/London",
+      "time": "18:10"
+    },
+    "EMEAE Western": {
+      "timezone": "Europe/London",
       "time": "19:10"
     },
-    "EMEAE West": {
-      "timezone": "Europe/London",
+    "American Eastern": {
+      "timezone": "America/New_York",
       "time": "19:20"
     },
-    "Americas South": {
-      "timezone": "America/Santiago",
-      "time": "18:20"
-    },
-    "Americas East": {
-      "timezone": "America/Denver",
-      "time": "17:20"
-    },
-    "Americas West": {
-      "timezone": "America/Denver",
-      "time": "19:30"
+    "American Western": {
+      "timezone": "America/New_York",
+      "time": "21:30"
     }
   },
   "open": {
-    "Oceania North-East": {
-      "timezone": "Australia/Sydney",
-      "time": "16:15"
-    },
-    "Oceania East": {
-      "timezone": "Pacific/Auckland",
-      "time": "19:15"
-    },
-    "Oceania South": {
+    "Oceania Eastern": {
       "timezone": "Europe/London",
-      "time": "07:15"
+      "time": "05:15"
     },
-    "Oceania West": {
+    "Oceania Central": {
+      "timezone": "Europe/London",
+      "time": "06:15"
+    },
+    "Oceania Western": {
       "timezone": "Australia/Sydney",
       "time": "19:20"
     },
-    "Atlantic South-East": {
+    "Atlantic Eastern": {
       "timezone": "Europe/London",
       "time": "09:30"
     },
-    "Atlantic East": {
+    "Atlantic Southern": {
       "timezone": "America/New_York",
       "time": "05:30"
     },
     "Atlantic Central": {
-      "timezone": "America/Chicago",
-      "time": "05:30"
+      "timezone": "America/New_York",
+      "time": "06:30"
     },
-    "Atlantic North": {
+    "Atlantic Northern": {
       "timezone": "America/New_York",
       "time": "07:30"
     },
-    "Atlantic West": {
-      "timezone": "America/Denver",
-      "time": "06:30"
+    "EMEAE Eastern": {
+      "timezone": "Europe/London",
+      "time": "17:00"
     },
-    "EMEAE South-East": {
-      "timezone": "Africa/Johannesburg",
-      "time": "19:00"
-    },
-    "EMEAE East": {
-      "timezone": "Europe/Amsterdam",
-      "time": "18:30"
-    },
-    "EMEAE North-East": {
-      "timezone": "Europe/Amsterdam",
-      "time": "18:45"
-    },
-    "EMEAE South": {
-      "timezone": "Europe/Amsterdam",
-      "time": "19:00"
+    "EMEAE Southern": {
+      "timezone": "Europe/London",
+      "time": "17:30"
     },
     "EMEAE Central": {
-      "timezone": "Europe/Amsterdam",
-      "time": "19:15"
+      "timezone": "Europe/London",
+      "time": "18:00"
     },
-    "EMEAE North": {
-      "timezone": "Europe/Amsterdam",
-      "time": "19:30"
+    "EMEAE Northern": {
+      "timezone": "Europe/London",
+      "time": "18:15"
     },
-    "EMEAW South-East": {
-      "timezone": "Europe/Amsterdam",
-      "time": "19:45"
+    "EMEAE Western": {
+      "timezone": "Europe/London",
+      "time": "18:30"
     },
-    "EMEAW East": {
+    "EMEAW Eastern": {
+      "timezone": "Europe/London",
+      "time": "18:45"
+    },
+    "EMEAW Southern": {
       "timezone": "Europe/London",
       "time": "19:00"
-    },
-    "EMEAW South": {
-      "timezone": "Europe/London",
-      "time": "19:15"
     },
     "EMEAW Central": {
       "timezone": "Europe/London",
+      "time": "19:15"
+    },
+    "EMEAW Northern": {
+      "timezone": "Europe/London",
       "time": "19:30"
     },
-    "EMEAW North": {
-      "timezone": "Europe/London",
-      "time": "19:35"
-    },
-    "EMEAW West": {
+    "EMEAW Western": {
       "timezone": "Europe/London",
       "time": "19:45"
     },
-    "Americas South": {
+    "Americas Southern": {
       "timezone": "America/Santiago",
       "time": "20:30"
     },
-    "Americas East": {
+    "Americas Eastern": {
       "timezone": "America/New_York",
       "time": "19:30"
     },
     "Americas Central": {
-      "timezone": "America/Denver",
-      "time": "17:35"
+      "timezone": "America/New_York",
+      "time": "20:30"
     },
-    "Americas North": {
-      "timezone": "America/Denver",
-      "time": "18:30"
-    },
-    "Americas West": {
-      "timezone": "America/Denver",
-      "time": "19:45"
+    "Americas Western": {
+      "timezone": "America/New_York",
+      "time": "21:45"
     }
   }
 }
