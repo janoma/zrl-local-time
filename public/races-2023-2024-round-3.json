@@ -1,0 +1,44 @@
+[
+  {
+    "number": 1,
+    "date": "2024-01-23",
+    "type": "Scratch",
+    "course": "Ocean Lava Cliffside Loop",
+    "courseUrl": "https://zwiftinsider.com/route/ocean-lava-cliffside-loop/"
+  },
+  {
+    "number": 2,
+    "date": "2024-01-30",
+    "type": "Points",
+    "course": "Island Hopper",
+    "courseUrl": "https://zwiftinsider.com/route/island-hopper/"
+  },
+  {
+    "number": 3,
+    "date": "2024-02-06",
+    "type": "TTT",
+    "course": "R.G.V.",
+    "courseUrl": "https://zwiftinsider.com/route/rgv/"
+  },
+  {
+    "number": 4,
+    "date": "2024-02-13",
+    "type": "Scratch",
+    "course": "Innsbruckring",
+    "courseUrl": "https://zwiftinsider.com/route/innsbruckring/"
+  },
+  {
+    "number": 5,
+    "date": "2024-02-20",
+    "type": "Points",
+    "course": "Chasing the Sun",
+    "courseUrl": "https://zwiftinsider.com/route/chasing-the-sun/"
+  },
+  {
+    "number": 6,
+    "date": "2024-02-27",
+    "type": "TTT",
+    "course": "Out and Back Again",
+    "courseUrl": "https://zwiftinsider.com/route/out-and-back-again/"
+  }
+]

@@ -64,7 +64,7 @@ function App() {
 
   useEffect(() => {
     const fetchZrl = async () => {
-      fetch("./zrl.json")
+      fetch("./zrl-2024-01-06.json")
         .then((response) => response.json())
         .then((data) => {
           setZrl(data);
@@ -77,7 +77,7 @@ function App() {
 
   useEffect(() => {
     const fetchRaces = async () => {
-      fetch("./races.json")
+      fetch("./races-2023-2024-round-3.json")
         .then((response) => response.json())
         .then((data) => setRaces(data));
     };
